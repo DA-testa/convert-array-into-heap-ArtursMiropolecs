@@ -20,21 +20,9 @@ def sift_down(i, data, swaps):
         sift_down(min_index, data, swaps)
 
 def main():
-    input_type = input("Enter input type: I for keyboard, F for file: ")
-    if input_type == "I":
-        n = int(input())
-        data = list(map(int, input().split()))
-        assert len(data) == n
-    elif input_type == "F":
-        file_name = input("Enter file name: ")
-        with open(file_name, 'r') as f:
-            n = int(f.readline())
-            data = list(map(int, f.readline().split()))
-            assert len(data) == n
-    else:
-        print("Invalid input type.")
-        return
-    
+    n = int(input())
+    data = list(map(int, input().split()))
+    assert len(data) == n
     swaps = build_heap(data)
     print(len(swaps))
     for i, j in swaps:
