@@ -25,7 +25,7 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
         assert len(data) == n
-    elif input_type == "F":
+    elif input_type == "f":
         file_name = input("Enter file name: ")
         with open(file_name, 'r') as f:
             n = int(f.readline())
