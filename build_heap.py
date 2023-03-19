@@ -21,6 +21,7 @@ def sift_down(i, data, swaps):
         sift_down(min_index, data, swaps)
 
 def main():
+    
     try:
         input_type = input("Enter input type: I for keyboard, F for file: ")
         if input_type.startswith('I'):
